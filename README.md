@@ -12,6 +12,6 @@ Recaptcha setup:
 2. Look for an dropdown arrow which says "Keys". Click it.
 3. In index.php on line 37, enter your site key where it says.
 4. On line 73 in index.php, enter your secret.
-5. All done!
+5. All done!!
 
 Live demo: http://zach.red/status
