@@ -56,7 +56,7 @@ if (isset($_POST['submitButton'])){
             pingAddress($_POST['site_input']);
         }else{
 
-            echo "invalid captcha";
+            echo "<div align=center>Invalid Captcha Input.</div>";
         }
     }else{
         echo "<div align=center>NO ONION DOMAINS!</div>";
@@ -71,7 +71,7 @@ if (isset($_POST['submitButton'])){
     $params = array(
 
     'secret' => urlencode('YOUR RECAPTCHA SECRET'),
-    'response' => urlencode(grecaptcha.getResponse())
+    'response' => urlencode($_POST['g-recaptcha-response'])
 
 
     );
@@ -90,8 +90,7 @@ if (isset($_POST['submitButton'])){
 
     $output = curl_exec($curl);
     curl_close();
-    echo $output;
-   if (!$output == ""){
+   if (strpos($output, 'true')){
        return true;
 
    }else{
