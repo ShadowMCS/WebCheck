@@ -1,4 +1,4 @@
-#WebCheck
+# WebCheck
 
 My first project with PHP, don't judge. 
 
@@ -20,4 +20,3 @@ Recaptcha setup:
 5. All done!!
 <br>
 
-Live demo: http://zach.red/status
